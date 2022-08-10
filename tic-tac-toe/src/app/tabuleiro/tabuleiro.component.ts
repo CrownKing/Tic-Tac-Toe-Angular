@@ -54,6 +54,7 @@ export class TabuleiroComponent implements OnInit {
       }
       else{
         this.currentPlayer = this.currentPlayer === espacoEnum.X ? espacoEnum.O: espacoEnum.X
+        this.statusMessage = `Player ${this.currentPlayer}'s turn`;
       }
     }
   }
