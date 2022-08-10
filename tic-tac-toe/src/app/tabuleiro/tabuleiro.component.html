@@ -1,0 +1,16 @@
+<div>
+    <div class="status text-center p-4">
+        {{statusMessage}}
+    </div>
+    <div class="tabuleiro" *ngFor="let row of [0,1,2]">
+        <app-espaco *ngFor="let col of [0,1,2]"
+        [row]="row"
+        [col]="col"
+        [jogada]="tabuleiro[row][col]"
+        (click)="jogada(row,col)">
+        </app-espaco>
+    </div>
+    <div class="pt-2">
+        <button *ngIf="gameOver" class="btn btn-primary new-game"(click)="newGame()">New Game</button>
+    </div>
+</div>
