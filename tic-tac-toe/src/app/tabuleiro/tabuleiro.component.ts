@@ -38,7 +38,7 @@ export class TabuleiroComponent implements OnInit {
     }
     this.currentPlayer = espacoEnum.X;
     this.isGameOver = false;
-    this.statusMessage = `Player ${this.currentPlayer}'s turn`;
+    this.statusMessage = `Vez do jogador ${this.currentPlayer}`;
 
   }
   jogada(row:number, col:number):void{
@@ -54,7 +54,7 @@ export class TabuleiroComponent implements OnInit {
       }
       else{
         this.currentPlayer = this.currentPlayer === espacoEnum.X ? espacoEnum.O: espacoEnum.X
-        this.statusMessage = `Player ${this.currentPlayer}'s turn`;
+        this.statusMessage = `Vez do jogador ${this.currentPlayer}`;
       }
     }
   }
